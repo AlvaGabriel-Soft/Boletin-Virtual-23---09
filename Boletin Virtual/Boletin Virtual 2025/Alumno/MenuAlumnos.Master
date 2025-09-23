@@ -1,0 +1,55 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MenuAlumnos.master.cs" Inherits="Boletin_Virtual_2025.MenuAlumnos" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head id="Head1" runat="server">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><asp:ContentPlaceHolder ID="TitleContent" runat="server" /></title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="~/Contenido/MenuAlumnos/css/style.css"/>
+    <link rel="stylesheet" href="~/Contenido/MenuModerador/AgregarAlumno/css/AgregarAlumno.css" />
+    <!-- Boxicons CSS -->
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <nav runat="server" id="navBar">
+            <div class="logo">
+                <i class="bx bx-menu menu-icon"></i>
+                <span class="logo-name">Instituto46</span>
+            </div>
+             <div class="user-info">
+            <asp:Label ID="lblUserWelcome" runat="server"></asp:Label>
+        </div>
+            <div class="sidebar">
+                <div class="logo">
+                    <i class="bx bx-menu menu-icon"></i>
+                    <span class="logo-name">Boletin</span>
+                </div>
+                <div class="sidebar-content">
+                    <ul class="lists">
+                        <li class="list"><a href="MisDatosAlumno.aspx" class="nav-link"><i class="bx bx-home-alt icon"></i><span class="link">Mis Datos</span></a></li>
+                        <li class="list"><a href="#" class="nav-link"><i class="bx bx-bar-chart-alt-2 icon"></i><span class="link">Cursos</span></a></li>
+                        <li class="list"><a href="#" class="nav-link"><i class="bx bx-bell icon"></i><span class="link">Finales</span></a></li>
+                      <!--  <li class="list"><a href="#" class="nav-link"><i class="bx bx-message-rounded icon"></i><span class="link">mensajes</span></a></li>
+                        <li class="list"><a href="#" class="nav-link"><i class="bx bx-pie-chart-alt-2 icon"></i><span class="link">Analytics</span></a></li>
+                        <li class="list"><a href="#" class="nav-link"><i class="bx bx-heart icon"></i><span class="link">Likes</span></a></li>
+                        <li class="list"><a href="#" class="nav-link"><i class="bx bx-folder-open icon"></i><span class="link">Files</span></a></li>  -->
+                    </ul>
+                    <div class="bottom-cotent">
+                        <li class="list"><a href="#" class="nav-link"><i class="bx bx-cog icon"></i><span class="link">Settings</span></a></li>
+                        <li class="list"><a href="#" class="nav-link"><i class="bx bx-log-out icon"></i><span class="link">Logout</span></a></li>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <section class="overlay"></section>
+        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+        </asp:ContentPlaceHolder>
+    </form>
+    <!-- JavaScript -->
+     <script type="text/javascript" src="<%= ResolveUrl("~/Contenido/MenuAlumnos/script/JScript1.js") %>"></script>
+</body>
+</html>

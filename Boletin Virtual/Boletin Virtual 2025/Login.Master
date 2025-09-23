@@ -1,0 +1,110 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Login.master.cs" Inherits="Boletin_Virtual_2025.Login" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head id="Head1" runat="server">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>website con login y formulario de inscripcion</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="Contenido/Login/css/Login.css" />
+    <script src="Contenido/Login/Script/LoginScript.js"></script>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+
+        <header>
+            <nav class="navbar">
+                <span class="hamburger-btn material-symbols-rounded">menu</span>
+                <a href="#" class="logo">
+                    <img src="Contenido/Login/imagenes/logo.jpg" alt="logo" />
+                    <h2>boletin virtual</h2>
+                </a>
+                <ul class="links">
+                    <span class="close-btn material-symbols-rounded">close</span>
+                    <li><a href="Instituto.aspx">Instituto</a></li>
+                    <li><a href="#">Contactos</a></li>
+                </ul>
+                <button type="button" class="login-btn">LOG IN</button>
+            </nav>
+        </header>
+
+        <div class="blur-bg-overlay"></div>
+
+       <main class="contenido">
+
+       <div class="form-popup">
+        <span class="close-btn material-symbols-rounded">Cerrar</span>
+        <div class="form-box login">
+            <div class="form-details">
+                <h2>Bienvenido</h2>
+                <p>Por favor, ingrese sus datos para ingresar</p>
+            </div>
+            <div class="form-content">
+                <h2>Ingresar</h2>
+                <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                    <ContentTemplate>
+                        <asp:Panel ID="LoginPanel" runat="server">
+                            <div class="input-field">
+                                <asp:TextBox ID="txtEmail" runat="server" placeholder="Email"></asp:TextBox>
+                            </div>
+                            <div class="input-field">
+                                <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" placeholder="Password"></asp:TextBox>
+                            </div>
+                            <asp:Label ID="Label1" runat="server" Text="Label" Visible="false">Contraseña o usuario incorrecto.</asp:Label>
+                            <a href="#" class="forgot-pass-link">Olvidaste tu contraseña?</a>
+                            <asp:Button ID="btnLogin" runat="server" Text="Ingresar" CssClass="btn" OnClick="btnLogin_Click" />
+                        </asp:Panel>
+                    </ContentTemplate>
+                </asp:UpdatePanel>
+                <div class="bottom-link">
+                    No tienes una cuenta?
+                    <a href="#" id="signup-link">Registrarse</a>
+                </div>
+            </div>
+        </div>
+        <div class="form-box signup">
+            <div class="form-details">
+                <h2>Crear cuenta</h2>
+                <p>para formar parte de la comunidad, por favor ingese sus datos</p>
+            </div>
+            <div class="form-content">
+                <h2>Registrarse</h2>
+                <asp:UpdatePanel ID="UpdatePanel2" runat="server">
+                    <ContentTemplate>
+                        <asp:Panel ID="SignupPanel" runat="server">
+                            <div class="input-field">
+                                <asp:TextBox ID="txtSignupEmail" runat="server" placeholder="Enter your email"></asp:TextBox>
+                            </div>
+                            <div class="input-field">
+                                <asp:TextBox ID="txtSignupPassword" runat="server" TextMode="Password" placeholder="Create password"></asp:TextBox>
+                            </div>
+                            <asp:Label ID="Label2" runat="server" Text="Label" Visible="false"></asp:Label>
+                            <div class="policy-text">
+                                <asp:CheckBox ID="chkPolicy" runat="server" />
+                                <label for="<%= chkPolicy.ClientID %>">Estoy de acuerdo
+                                    <a href="#" class="option">Terminos y condiciones</a>
+                                </label>
+                            </div>
+                            <asp:Button ID="btnSignup" runat="server" Text="Sign Up" CssClass="btn" OnClick="btnSignup_Click" />
+                        </asp:Panel>
+                    </ContentTemplate>
+                </asp:UpdatePanel>
+                <div class="bottom-link">
+                    ya tienes una cuenta?
+                    <a href="#" id="login-link">Ingresar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+  <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+  </asp:ContentPlaceHolder>
+</main>
+
+    </form>
+</body>
+</html>

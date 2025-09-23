@@ -1,0 +1,59 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MenuModerador.master.cs" Inherits="Boletin_Virtual_2025.MenuModerador" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head id="Head1" runat="server">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><asp:ContentPlaceHolder ID="TitleContent" runat="server" /></title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="~/Contenido/MenuAlumnos/css/style.css" />
+    <link rel="stylesheet" href="~/Contenido/MenuModerador/AgregarAlumno/css/AgregarAlumno.css" />
+   <link rel="stylesheet" href="~/Contenido/MenuModerador/AgregarAlumno/css/AgregarProfesor.css" />
+    <!-- Boxicons CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <nav id="navBar">
+            <div class="logo">
+                <i class="bx bx-menu menu-icon"></i>
+                <span class="logo-name">Instituto46</span>
+            </div>
+            <div class="user-info">
+                <asp:Label ID="lblUserWelcome" runat="server"></asp:Label>
+            </div>
+            <div class="sidebar">
+                <div class="logo">
+                    <i class="bx bx-menu menu-icon"></i>
+                    <span class="logo-name">Boletin</span>
+                </div>
+                <div class="sidebar-content">
+                    <ul class="lists">
+                        <li class="list"><a href="AgregarAlumno.aspx" class="nav-link"><i class="bx bx-home-alt icon"></i><span class="link">Agregar Alumno</span></a></li>
+                        <li class="list"><a href="AgregarProfesor.aspx" class="nav-link"><i class="bx bx-bar-chart-alt-2 icon"></i><span class="link">Agregar Profesor</span></a></li>
+                        <li class="list"><a href="AsignarProfesorMateria.aspx" class="nav-link"><i class="bx bx-bell icon"></i><span class="link">Asignar</span></a></li>
+                    <!--      <li class="list"><a href="#" class="nav-link"><i class="bx bx-message-rounded icon"></i><span class="link">Mensajes</span></a></li>
+                   <!--       <li class="list"><a href="#" class="nav-link"><i class="bx bx-pie-chart-alt-2 icon"></i><span class="link">Analytics</span></a></li>
+                    <!--      <li class="list"><a href="#" class="nav-link"><i class="bx bx-heart icon"></i><span class="link">Likes</span></a></li>
+                   <!--      <li class="list"><a href="#" class="nav-link"><i class="bx bx-folder-open icon"></i><span class="link">Files</span></a></li> --->
+                    </ul>
+                    <div class="bottom-content">
+                        <li class="list"><a href="#" class="nav-link"><i class="bx bx-cog icon"></i><span class="link">Settings</span></a></li>
+                        <li class="list"><a href="#" class="nav-link"><i class="bx bx-log-out icon"></i><span class="link">Logout</span></a></li>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <section class="overlay"></section>
+        <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+    </form>
+
+    <!-- JavaScript -->
+    <script type="text/javascript" src="<%= ResolveUrl("~/Contenido/MenuAlumnos/script/JScript1.js") %>"></script>
+    <script src="<%= ResolveUrl("~/Contenido/MenuModerador/AgregarAlumno/script/AgregarAlumno.js") %>"></script>
+    <script src="<%= ResolveUrl("~/Contenido/MenuModerador/AgregarAlumno/script/AgregarProfesor.js") %>"></script>
+</body>
+</html>
