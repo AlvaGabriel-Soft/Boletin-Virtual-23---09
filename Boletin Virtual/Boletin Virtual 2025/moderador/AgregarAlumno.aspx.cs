@@ -61,7 +61,7 @@ namespace Boletin_Virtual_2025
                         SqlCommand commandAlumno = new SqlCommand(queryAlumno, conexion, transaction);
                         commandAlumno.Parameters.AddWithValue("@id_usuario", idUsuario);
                         commandAlumno.Parameters.AddWithValue("@id_carrera", carreras.SelectedValue);
-                        commandAlumno.Parameters.AddWithValue("@legajo", legajo.Text); 
+                        commandAlumno.Parameters.AddWithValue("@legajo", legajo.Text);
                         commandAlumno.Parameters.AddWithValue("@fecha_ingreso", DateTime.Now);
 
                         int idAlumno = Convert.ToInt32(commandAlumno.ExecuteScalar());
@@ -77,17 +77,42 @@ namespace Boletin_Virtual_2025
     WHERE m.id_carrera = @id_carrera AND mp.id_prerequisito = 0;";
 
 
-
-
                         SqlCommand commandAlumnoMateria = new SqlCommand(queryAlumnoMateria, conexion, transaction);
 
                         commandAlumnoMateria.Parameters.AddWithValue("@id_alumno", idAlumno);
                         commandAlumnoMateria.Parameters.AddWithValue("@id_carrera", carreras.SelectedValue);
                         commandAlumnoMateria.Parameters.AddWithValue("@fecha_inscripcion", DateTime.Now);
-
                         commandAlumnoMateria.ExecuteNonQuery();
 
-                       
+
+
+                        // 4. Asignar alumno y profesor de la materia al Curso. 
+
+                        string queryCursada = @"
+INSERT INTO dbo.Cursada (id_alumno, id_materia, id_profesor, fecha, estado) 
+SELECT 
+    @id_alumno, 
+    m.id_materia, 
+    pm.id_profesor,   
+    @fecha_inicio, 
+    @estado 
+FROM dbo.Materia m
+INNER JOIN dbo.Materia_Prerequisito mp 
+    ON m.id_materia = mp.id_materia
+INNER JOIN dbo.Profesor_Materia pm 
+    ON pm.id_materia = m.id_materia
+WHERE m.id_carrera = @id_carrera 
+  AND mp.id_prerequisito = 0;";
+
+                        SqlCommand commandCursada = new SqlCommand(queryCursada, conexion, transaction);
+
+                        commandCursada.Parameters.AddWithValue("@id_alumno", idAlumno);
+                        commandCursada.Parameters.AddWithValue("@id_carrera", carreras.SelectedValue);
+                        commandCursada.Parameters.AddWithValue("@fecha_inicio", DateTime.Now);
+                        commandCursada.Parameters.AddWithValue("@estado", "Cursando" );
+                        commandCursada.ExecuteNonQuery();
+
+                       //
                         transaction.Commit();
 
                         Response.Write("<script>alert('Usuario y alumno creados correctamente');</script>");

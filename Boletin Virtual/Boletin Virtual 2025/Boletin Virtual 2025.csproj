@@ -50,6 +50,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Alumno\Boletin.aspx" />
     <Content Include="Contenido\MenuModerador\AgregarAlumno\script\AgregarAlumno.js" />
     <Content Include="Contenido\MenuModerador\AgregarAlumno\script\AgregarProfesor.js" />
     <Content Include="moderador\AgregarAlumno.aspx" />
@@ -68,6 +69,7 @@
     <Content Include="Alumno\MisDatosAlumno.aspx" />
     <Content Include="moderador\AgregarProfesor.aspx" />
     <Content Include="moderador\AsignarProfesorMateria.aspx" />
+    <Content Include="Profesor\Boletin.aspx" />
     <Content Include="Profesor\MisDatos.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -78,6 +80,13 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Alumno\Boletin.aspx.cs">
+      <DependentUpon>Boletin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Alumno\Boletin.aspx.designer.cs">
+      <DependentUpon>Boletin.aspx</DependentUpon>
+    </Compile>
     <Compile Include="moderador\AgregarAlumno.aspx.cs">
       <DependentUpon>AgregarAlumno.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -148,6 +157,13 @@
     <Compile Include="moderador\MenuModerador.Master.designer.cs">
       <DependentUpon>MenuModerador.Master</DependentUpon>
     </Compile>
+    <Compile Include="Profesor\Boletin.aspx.cs">
+      <DependentUpon>Boletin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Profesor\Boletin.aspx.designer.cs">
+      <DependentUpon>Boletin.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Profesor\MenuProfesor.Master.cs">
       <DependentUpon>MenuProfesor.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -187,7 +203,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>63100</DevelopmentServerPort>
+          <DevelopmentServerPort>52093</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>

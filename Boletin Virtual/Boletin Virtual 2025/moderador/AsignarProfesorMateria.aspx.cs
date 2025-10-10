@@ -180,6 +180,30 @@ namespace Boletin_Virtual_2025.moderador
                             }
                         }
                     }
+                    string updateCursadasQuery = @"
+    UPDATE c
+    SET c.id_profesor = pm.id_profesor
+    FROM dbo.Cursada c
+    INNER JOIN dbo.Profesor_Materia pm ON c.id_materia = pm.id_materia
+    WHERE YEAR(c.fecha) = YEAR(GETDATE());"; // sólo las cursadas de este año
+
+                    using (SqlCommand cmdUpdate = new SqlCommand(updateCursadasQuery, conexion, trans))
+                    {
+                        cmdUpdate.ExecuteNonQuery();
+                    }
+
+                    string nullCursadasQuery = @"
+                UPDATE Cursada
+                SET id_profesor = NULL
+                WHERE id_materia NOT IN (SELECT id_materia FROM Profesor_Materia)
+                  AND YEAR(fecha) = YEAR(GETDATE());";
+
+                    using (SqlCommand cmdNull = new SqlCommand(nullCursadasQuery, conexion, trans))
+                    {
+                        cmdNull.ExecuteNonQuery();
+                    }
+
+
 
                     trans.Commit();
                     lblMensaje.Text = "Asignaciones actualizadas correctamente.";

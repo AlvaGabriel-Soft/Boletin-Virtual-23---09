@@ -31,3 +31,13 @@ C:\Users\alva_\OneDrive\Desktop\trabajo\trabajo\16-09 ultimo\Boletin Virtual\Bol
 C:\Users\alva_\OneDrive\Desktop\trabajo\trabajo\16-09 ultimo\Boletin Virtual\Boletin Virtual 2025\obj\Debug\Boletin Virtual 2025.csprojResolveAssemblyReference.cache
 C:\Users\alva_\OneDrive\Desktop\trabajo\trabajo\16-09 ultimo\Boletin Virtual\Boletin Virtual 2025\obj\Debug\Boletin Virtual 2025.dll
 C:\Users\alva_\OneDrive\Desktop\trabajo\trabajo\16-09 ultimo\Boletin Virtual\Boletin Virtual 2025\obj\Debug\Boletin Virtual 2025.pdb
+C:\Users\alva_\OneDrive\Desktop\trabajo\trabajo\23-09\Boletin Virtual\Boletin Virtual 2025\obj\Debug\Boletin Virtual 2025.csprojResolveAssemblyReference.cache
+C:\Users\alva_\OneDrive\Desktop\trabajo\trabajo\23-09\Boletin Virtual\Boletin Virtual 2025\obj\Debug\Boletin Virtual 2025.dll
+C:\Users\alva_\OneDrive\Desktop\trabajo\trabajo\23-09\Boletin Virtual\Boletin Virtual 2025\obj\Debug\Boletin Virtual 2025.pdb
+C:\Users\alva_\OneDrive\Desktop\trabajo\trabajo\23-09\Boletin Virtual\Boletin Virtual 2025\bin\Boletin Virtual 2025.dll
+C:\Users\alva_\OneDrive\Desktop\trabajo\trabajo\23-09\Boletin Virtual\Boletin Virtual 2025\bin\Boletin Virtual 2025.pdb
+C:\Users\alva_\OneDrive\Desktop\trabajo\trabajo\02-10 - copia\Boletin Virtual\Boletin Virtual 2025\bin\Boletin Virtual 2025.dll
+C:\Users\alva_\OneDrive\Desktop\trabajo\trabajo\02-10 - copia\Boletin Virtual\Boletin Virtual 2025\bin\Boletin Virtual 2025.pdb
+C:\Users\alva_\OneDrive\Desktop\trabajo\trabajo\02-10 - copia\Boletin Virtual\Boletin Virtual 2025\obj\Debug\Boletin Virtual 2025.csprojResolveAssemblyReference.cache
+C:\Users\alva_\OneDrive\Desktop\trabajo\trabajo\02-10 - copia\Boletin Virtual\Boletin Virtual 2025\obj\Debug\Boletin Virtual 2025.dll
+C:\Users\alva_\OneDrive\Desktop\trabajo\trabajo\02-10 - copia\Boletin Virtual\Boletin Virtual 2025\obj\Debug\Boletin Virtual 2025.pdb

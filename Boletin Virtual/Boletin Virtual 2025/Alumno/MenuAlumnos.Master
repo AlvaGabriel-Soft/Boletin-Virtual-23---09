@@ -31,8 +31,8 @@
                 <div class="sidebar-content">
                     <ul class="lists">
                         <li class="list"><a href="MisDatosAlumno.aspx" class="nav-link"><i class="bx bx-home-alt icon"></i><span class="link">Mis Datos</span></a></li>
-                        <li class="list"><a href="#" class="nav-link"><i class="bx bx-bar-chart-alt-2 icon"></i><span class="link">Cursos</span></a></li>
-                        <li class="list"><a href="#" class="nav-link"><i class="bx bx-bell icon"></i><span class="link">Finales</span></a></li>
+                        <li class="list"><a href="boletin.aspx" class="nav-link"><i class="bx bx-bar-chart-alt-2 icon"></i><span class="link">boletin</span></a></li>
+                        <li class="list"><a href="#" class="nav-link"><i class="bx bx-bell icon"></i><span class="link">boletin</span></a></li>
                       <!--  <li class="list"><a href="#" class="nav-link"><i class="bx bx-message-rounded icon"></i><span class="link">mensajes</span></a></li>
                         <li class="list"><a href="#" class="nav-link"><i class="bx bx-pie-chart-alt-2 icon"></i><span class="link">Analytics</span></a></li>
                         <li class="list"><a href="#" class="nav-link"><i class="bx bx-heart icon"></i><span class="link">Likes</span></a></li>

@@ -33,8 +33,9 @@
                 <div class="sidebar-content">
                     <ul class="lists">
                         <li class="list"><a href="AgregarAlumno.aspx" class="nav-link"><i class="bx bx-home-alt icon"></i><span class="link">Agregar Alumno</span></a></li>
-                        <li class="list"><a href="AgregarProfesor.aspx" class="nav-link"><i class="bx bx-bar-chart-alt-2 icon"></i><span class="link">Agregar Profesor</span></a></li>
-                        <li class="list"><a href="AsignarProfesorMateria.aspx" class="nav-link"><i class="bx bx-bell icon"></i><span class="link">Asignar</span></a></li>
+                        <li class="list"><a href="AgregarProfesor.aspx" class="nav-link"><i class="bx bx-bar-chart-alt-2 icon"></i><span class="link">Agregar Profesor </span></a></li>
+                        <li class="list"><a href="AsignarProfesorMateria.aspx" class="nav-link"><i class="bx bx-bell icon"></i><span class="link">Asignar Profesor Materia</span></a></li>
+                        <li class="list"><a href="AsignarProfesorCursada.aspx" class="nav-link"><i class="bx bx-bell icon"></i><span class="link">Asignar Profesor Cursada</span></a></li>
                     <!--      <li class="list"><a href="#" class="nav-link"><i class="bx bx-message-rounded icon"></i><span class="link">Mensajes</span></a></li>
                    <!--       <li class="list"><a href="#" class="nav-link"><i class="bx bx-pie-chart-alt-2 icon"></i><span class="link">Analytics</span></a></li>
                     <!--      <li class="list"><a href="#" class="nav-link"><i class="bx bx-heart icon"></i><span class="link">Likes</span></a></li>
