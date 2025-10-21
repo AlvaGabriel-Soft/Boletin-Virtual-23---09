@@ -88,8 +88,7 @@ namespace Boletin_Virtual_2025
 
                         // 4. Asignar alumno y profesor de la materia al Curso. 
 
-                        string queryCursada = @"
-INSERT INTO dbo.Cursada (id_alumno, id_materia, id_profesor, fecha, estado) 
+                        string queryCursada = @"INSERT INTO dbo.Cursada (id_alumno, id_materia, id_profesor, fecha, estado) 
 SELECT 
     @id_alumno, 
     m.id_materia, 
@@ -97,12 +96,12 @@ SELECT
     @fecha_inicio, 
     @estado 
 FROM dbo.Materia m
-INNER JOIN dbo.Materia_Prerequisito mp 
+LEFT JOIN dbo.Materia_Prerequisito mp 
     ON m.id_materia = mp.id_materia
-INNER JOIN dbo.Profesor_Materia pm 
+LEFT JOIN dbo.Profesor_Materia pm 
     ON pm.id_materia = m.id_materia
 WHERE m.id_carrera = @id_carrera 
-  AND mp.id_prerequisito = 0;";
+  AND ISNULL(mp.id_prerequisito, 0) = 0;";
 
                         SqlCommand commandCursada = new SqlCommand(queryCursada, conexion, transaction);
 

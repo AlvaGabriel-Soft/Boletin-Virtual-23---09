@@ -71,7 +71,9 @@
     <Content Include="moderador\AsignarProfesorMateria.aspx" />
     <Content Include="Profesor\Boletin.aspx" />
     <Content Include="Profesor\MisDatos.aspx" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>

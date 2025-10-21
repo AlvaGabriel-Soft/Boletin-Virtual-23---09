@@ -35,7 +35,25 @@ namespace Boletin_Virtual_2025.Alumno
 
                     using (SqlConnection conexion = new SqlConnection(Cadena))
                     {
-                        string query = @"SELECT m.nombre_materia, ISNULL(CAST(c.nota AS VARCHAR), '-') AS nota, ISNULL(CAST(c.nota2 AS VARCHAR), '-') AS nota2, ISNULL(CAST(c.nota_Final AS VARCHAR), '-') AS nota_Final, ISNULL(c.estado, 'No inscripto') AS estado FROM dbo.Materia m INNER JOIN dbo.Carrera ca ON ca.id_carrera = m.id_carrera INNER JOIN dbo.Alumno a ON a.id_carrera = ca.id_carrera INNER JOIN dbo.Usuarios u ON u.id_usuario = a.id_usuario LEFT JOIN dbo.Cursada c ON c.id_materia = m.id_materia AND c.id_alumno = a.id_alumno WHERE u.id_usuario = @id";
+                        string query = @"SELECT 
+    m.nombre_materia,
+    ISNULL(mp.id_prerequisito, 0) AS id_prerequisito,
+    ISNULL(mr.nombre_materia, 'Sin requisito') AS materia_requisito,
+    ISNULL(CAST(c.nota AS VARCHAR), '-') AS nota,
+    ISNULL(CAST(c.nota2 AS VARCHAR), '-') AS nota2,
+    ISNULL(CAST(c.nota_Final AS VARCHAR), '-') AS nota_Final,
+    ISNULL(c.estado, 'No inscripto') AS estado
+FROM dbo.Materia m
+INNER JOIN dbo.Carrera ca ON ca.id_carrera = m.id_carrera
+INNER JOIN dbo.Alumno a ON a.id_carrera = ca.id_carrera
+INNER JOIN dbo.Usuarios u ON u.id_usuario = a.id_usuario
+LEFT JOIN dbo.Cursada c 
+    ON c.id_materia = m.id_materia AND c.id_alumno = a.id_alumno
+LEFT JOIN dbo.Materia_Prerequisito mp 
+    ON mp.id_materia = m.id_materia
+LEFT JOIN dbo.Materia mr 
+    ON mr.id_materia = mp.id_prerequisito
+WHERE u.id_usuario = @id;";
 
                         using (SqlCommand cmd = new SqlCommand(query, conexion))
                         {

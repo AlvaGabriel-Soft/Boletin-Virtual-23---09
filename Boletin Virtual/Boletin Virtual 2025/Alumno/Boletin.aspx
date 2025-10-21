@@ -63,23 +63,20 @@
     <p>Mis materias</p>
 </div> 
 
-<asp:GridView ID="GridViewMateriasAlumno" runat="server" AutoGenerateColumns="False" 
-    GridLines="None" AlternatingRowStyle-BackColor="#f2f2f2" 
+<asp:GridView ID="GridViewMateriasAlumno" runat="server" AutoGenerateColumns="False"
+    GridLines="None" AlternatingRowStyle-BackColor="#f2f2f2"
     HeaderStyle-BackColor="#4CAF50" HeaderStyle-ForeColor="White"
     RowStyle-BackColor="White" BorderStyle="Solid" BorderWidth="1px" BorderColor="#ddd">
-    
+
     <Columns>
         <asp:BoundField DataField="nombre_materia" HeaderText="Materia" />
-        <asp:TemplateField HeaderText="Profesor">
-           
-        </asp:TemplateField>
+        <asp:BoundField DataField="materia_requisito" HeaderText="Requisito" />
         <asp:BoundField DataField="nota" HeaderText="Nota 1" />
         <asp:BoundField DataField="nota2" HeaderText="Nota 2" />
         <asp:BoundField DataField="nota_Final" HeaderText="Nota Final" />
-        <asp:BoundField DataField="Estado" HeaderText="Estado" />
+        <asp:BoundField DataField="estado" HeaderText="Estado" />
     </Columns>
 </asp:GridView>
-
 
 
         <!--  POPUP -->

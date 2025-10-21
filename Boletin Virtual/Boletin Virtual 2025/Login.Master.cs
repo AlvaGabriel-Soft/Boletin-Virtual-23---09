@@ -11,7 +11,7 @@ namespace Boletin_Virtual_2025
 {
     public partial class Login : System.Web.UI.MasterPage
     {
-        private static string Cadena = ConfigurationManager.ConnectionStrings["boletin"].ConnectionString;
+        private static string Cadena = ConfigurationManager.ConnectionStrings["boletin"].ConnectionString;  //conexion
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -20,6 +20,8 @@ namespace Boletin_Virtual_2025
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
+
+
             string email = txtEmail.Text.Trim();
             string password = txtPassword.Text.Trim();
 
