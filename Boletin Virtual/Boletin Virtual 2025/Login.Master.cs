@@ -21,7 +21,6 @@ namespace Boletin_Virtual_2025
         protected void btnLogin_Click(object sender, EventArgs e)
         {
 
-
             string email = txtEmail.Text.Trim();
             string password = txtPassword.Text.Trim();
 

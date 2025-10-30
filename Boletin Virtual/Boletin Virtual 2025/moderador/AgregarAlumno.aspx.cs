@@ -16,9 +16,31 @@ namespace Boletin_Virtual_2025
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
+            if (Session["UserRol"] == null)
             {
-                CargarCarreras(); // Solo se carga la primera vez, no en postback
+                // No hay sesión activa → redirigir al login
+                Response.Redirect("../Login2.aspx");
+
+            }
+            else
+            {
+                int rol = Convert.ToInt32(Session["UserRol"]);
+
+                // Validar acceso según el rol
+                if (rol != 1) // Solo los administradores (rol = 1)
+                {
+                    Session.Clear();     // Borra todas las variables de sesión
+                    Session.Abandon();   // Marca la sesión como terminada
+                    Response.Redirect("../Login2.aspx");
+                }
+                else
+                {
+                    // Si el rol es correcto, se ejecuta el contenido de la página
+                    if (!IsPostBack)
+                    {
+                        CargarCarreras(); // Solo se carga la primera vez
+                    }
+                }
             }
         }
 
