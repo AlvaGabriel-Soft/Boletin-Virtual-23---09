@@ -7,37 +7,28 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace Boletin_Virtual_2025.Profesor {
+namespace Boletin_Virtual_2025.Alumno {
     
     
-    public partial class Boletin {
+    public partial class Inscripciones {
         
         /// <summary>
-        /// Control ddlMaterias.
+        /// Control pnlContenidoEspecialCerrado.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlMaterias;
+        protected global::System.Web.UI.WebControls.Panel pnlContenidoEspecialCerrado;
         
         /// <summary>
-        /// Control ddlAnios.
+        /// Control pnlContenidoEspecial.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlAnios;
-        
-        /// <summary>
-        /// Control BtnBuscar.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnBuscar;
+        protected global::System.Web.UI.WebControls.Panel pnlContenidoEspecial;
         
         /// <summary>
         /// Control lblMensaje.
@@ -49,12 +40,21 @@ namespace Boletin_Virtual_2025.Profesor {
         protected global::System.Web.UI.WebControls.Label lblMensaje;
         
         /// <summary>
-        /// Control GridViewBoletin.
+        /// Control MostrarBoletin.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridViewBoletin;
+        protected global::System.Web.UI.WebControls.Panel MostrarBoletin;
+        
+        /// <summary>
+        /// Control GridViewMateriasAlumno.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridViewMateriasAlumno;
     }
 }

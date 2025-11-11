@@ -31,6 +31,24 @@ namespace Boletin_Virtual_2025.moderador {
         protected global::System.Web.UI.WebControls.TextBox primernombre;
         
         /// <summary>
+        /// Control rfvPrimerNombre.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvPrimerNombre;
+        
+        /// <summary>
+        /// Control revPrimerNombre.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revPrimerNombre;
+        
+        /// <summary>
         /// Control apellido.
         /// </summary>
         /// <remarks>
@@ -38,6 +56,24 @@ namespace Boletin_Virtual_2025.moderador {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox apellido;
+        
+        /// <summary>
+        /// Control rfvapellido.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvapellido;
+        
+        /// <summary>
+        /// Control revapellido.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revapellido;
         
         /// <summary>
         /// Control dni.
@@ -49,6 +85,24 @@ namespace Boletin_Virtual_2025.moderador {
         protected global::System.Web.UI.WebControls.TextBox dni;
         
         /// <summary>
+        /// Control rfvDNItext.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator rfvDNItext;
+        
+        /// <summary>
+        /// Control revDNItext.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revDNItext;
+        
+        /// <summary>
         /// Control email.
         /// </summary>
         /// <remarks>
@@ -56,6 +110,24 @@ namespace Boletin_Virtual_2025.moderador {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox email;
+        
+        /// <summary>
+        /// Control rfvEmailtext.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvEmailtext;
+        
+        /// <summary>
+        /// Control revEmailtext.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revEmailtext;
         
         /// <summary>
         /// Control titulo.
@@ -76,13 +148,13 @@ namespace Boletin_Virtual_2025.moderador {
         protected global::System.Web.UI.WebControls.TextBox especialidad;
         
         /// <summary>
-        /// Control Label1.
+        /// Control UsuarioRepetido.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.Label UsuarioRepetido;
         
         /// <summary>
         /// Control lblConfirmacion.

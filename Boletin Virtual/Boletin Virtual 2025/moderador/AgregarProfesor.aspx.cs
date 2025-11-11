@@ -18,15 +18,35 @@ namespace Boletin_Virtual_2025.moderador
 
         protected void Page_Load(object sender, EventArgs e)
         {
-           
 
+            {
+                if (Session["UserRol"] == null)
+                {
+                    // No hay sesión activa → redirigir al login
+                    Response.Redirect("../Login2.aspx");
+
+                }
+                else
+                {
+                    int rol = Convert.ToInt32(Session["UserRol"]);
+
+                    // Validar acceso según el rol
+                    if (rol != 1) // Solo los administradores (rol = 1)
+                    {
+                        Session.Clear();     // Borra todas las variables de sesión
+                        Session.Abandon();   // Marca la sesión como terminada
+                        Response.Redirect("../Login2.aspx");
+                    }
+                }
+            }
         }
 
         protected void btnRegister_Click(object sender, EventArgs e)
         {
             if (ExisteUsuario(dni.Text))
             {
-                Response.Write("<script>alert('Usuario repetido');</script>");
+                UsuarioRepetido.Text = "No se a profesor: Usuario repetido";
+                UsuarioRepetido.Visible = true;
             }
             else
             {
@@ -68,7 +88,8 @@ namespace Boletin_Virtual_2025.moderador
 
                         transaction.Commit();
 
-                        Response.Write("<script>alert('Usuario y profesor creados correctamente');</script>");
+                        UsuarioRepetido.Text = "Usuario y profesor guardados correctamente";
+                        UsuarioRepetido.Visible = true;
 
                         primernombre.Text = idProfesor.ToString();
                         apellido.Text = "";

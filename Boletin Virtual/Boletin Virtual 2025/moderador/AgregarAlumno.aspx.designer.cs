@@ -13,6 +13,33 @@ namespace Boletin_Virtual_2025 {
     public partial class AgregarAlumno {
         
         /// <summary>
+        /// Control FileUploadUsuarios.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload FileUploadUsuarios;
+        
+        /// <summary>
+        /// Control btnCargarUsuarios.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnCargarUsuarios;
+        
+        /// <summary>
+        /// Control lblResultado.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblResultado;
+        
+        /// <summary>
         /// Control primernombre.
         /// </summary>
         /// <remarks>
@@ -20,6 +47,24 @@ namespace Boletin_Virtual_2025 {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox primernombre;
+        
+        /// <summary>
+        /// Control rfvPrimerNombre.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvPrimerNombre;
+        
+        /// <summary>
+        /// Control revPrimerNombre.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revPrimerNombre;
         
         /// <summary>
         /// Control apellido.
@@ -31,6 +76,24 @@ namespace Boletin_Virtual_2025 {
         protected global::System.Web.UI.WebControls.TextBox apellido;
         
         /// <summary>
+        /// Control rfvApellidotext.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvApellidotext;
+        
+        /// <summary>
+        /// Control revApellidotext.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revApellidotext;
+        
+        /// <summary>
         /// Control dni.
         /// </summary>
         /// <remarks>
@@ -40,6 +103,24 @@ namespace Boletin_Virtual_2025 {
         protected global::System.Web.UI.WebControls.TextBox dni;
         
         /// <summary>
+        /// Control rfvDNItext.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator rfvDNItext;
+        
+        /// <summary>
+        /// Control revDNItext.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revDNItext;
+        
+        /// <summary>
         /// Control email.
         /// </summary>
         /// <remarks>
@@ -47,6 +128,24 @@ namespace Boletin_Virtual_2025 {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox email;
+        
+        /// <summary>
+        /// Control rfvEmailtext.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvEmailtext;
+        
+        /// <summary>
+        /// Control revEmailtext.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revEmailtext;
         
         /// <summary>
         /// Control carreras.
@@ -65,6 +164,24 @@ namespace Boletin_Virtual_2025 {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox legajo;
+        
+        /// <summary>
+        /// Control rfvlegajotext.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvlegajotext;
+        
+        /// <summary>
+        /// Control revlegajotext.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revlegajotext;
         
         /// <summary>
         /// Control state.
@@ -103,13 +220,13 @@ namespace Boletin_Virtual_2025 {
         protected global::System.Web.UI.WebControls.TextBox area;
         
         /// <summary>
-        /// Control Label1.
+        /// Control UsuarioRepetido.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.Label UsuarioRepetido;
         
         /// <summary>
         /// Control lblConfirmacion.

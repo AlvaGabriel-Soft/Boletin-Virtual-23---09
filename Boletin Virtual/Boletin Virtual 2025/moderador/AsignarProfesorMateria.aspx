@@ -3,7 +3,7 @@
 </asp:Content><asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
 <div class="formbold-main-wrapper">
-    <div class="formbold-form-wrapper">
+    <div class="formbold-form-wrapper-profesormateria">
         
         <div class="formbold-form-title">
             <h2>Asignar profesores a materias</h2>

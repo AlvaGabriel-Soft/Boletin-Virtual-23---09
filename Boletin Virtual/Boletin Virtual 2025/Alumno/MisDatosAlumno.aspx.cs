@@ -16,11 +16,40 @@ namespace Boletin_Virtual_2025
         private static string Cadena = ConfigurationManager.ConnectionStrings["Boletin"].ConnectionString;
 
         protected void Page_Load(object sender, EventArgs e)
+       
         {
-            TraerDatos();
-            LlenarGridViewMateriasAlumno();
-        }
+            if (Session["UserRol"] == null)
+            {
+                // No hay sesión activa → redirigir al login
+                Response.Redirect("../Login2.aspx");
 
+            }
+            else
+            {
+                int rol = Convert.ToInt32(Session["UserRol"]);
+
+                // Validar acceso según el rol
+                if (rol != 3) // Solo los alumnos (rol = 3)
+                {
+                    Session.Clear();     // Borra todas las variables de sesión
+                    Session.Abandon();   // Marca la sesión como terminada
+                    Response.Redirect("../Login2.aspx");
+                }
+                else
+                {
+                    // Si el rol es correcto, se ejecuta el contenido de la página
+                    if (!IsPostBack)
+                    {
+                         TraerDatos();
+            LlenarGridViewMateriasAlumno(); // Solo se carga la primera vez
+                    }
+                }
+            }
+        }
+        
+        
+        
+     
         private void TraerDatos()
         {
             if (!IsPostBack)
@@ -38,13 +67,13 @@ namespace Boletin_Virtual_2025
                         SqlDataReader reader = cmd.ExecuteReader();
                         if (reader.Read())
                         {
-                            lblPrimerNombre.Text = "nombre: " + reader["nombre"].ToString();
-                            lblApellido.Text = reader["apellido"].ToString();
-                            lblDni.Text = reader["dni"].ToString();
+                            lblPrimerNombre.Text = "Nombre: " + reader["nombre"].ToString();
+                            lblApellido.Text = "Apellido: " + reader["apellido"].ToString();
+                            lblDni.Text = "Dni: " + reader["dni"].ToString();
 
-                            lblEmail.Text = reader["email"].ToString();
-                            lblLegajo.Text = reader["legajo"].ToString();
-                            lblCarrera.Text = reader["nombre_carrera"].ToString();
+                            lblEmail.Text = "Email: " + reader["email"].ToString();
+                            lblLegajo.Text = "Legajo: " + reader["legajo"].ToString();
+                            lblCarrera.Text = "Carrera: " + reader["nombre_carrera"].ToString();
                         }
                     }
                 }

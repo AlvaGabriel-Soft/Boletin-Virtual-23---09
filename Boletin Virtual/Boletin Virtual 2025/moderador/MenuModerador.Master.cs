@@ -13,5 +13,14 @@ namespace Boletin_Virtual_2025
         {
 
         }
+
+       protected void btnLogout_Click(object sender, EventArgs e)
+        {
+            // Limpia la sesión
+            Session.Clear();
+            Session.Abandon();
+            // Redirige al login
+            Response.Redirect("~/Login2.aspx");
+        }
     }
 }

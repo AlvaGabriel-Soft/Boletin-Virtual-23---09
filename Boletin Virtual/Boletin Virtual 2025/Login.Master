@@ -6,12 +6,14 @@
 <head id="Head1" runat="server">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>website con login y formulario de inscripcion</title>
+    <title>BOLETIN VIRTUAL</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="Contenido/Login/css/Login.css" />
     <script src="Contenido/Login/Script/LoginScript.js"></script>
 </head>
-<body>
+ 
+ 
+ <body>
     <form id="form1" runat="server">
         <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
 
@@ -20,18 +22,34 @@
                 <span class="hamburger-btn material-symbols-rounded">menu</span>
                 <a href="#" class="logo">
                     <img src="Contenido/Login/imagenes/logo.jpg" alt="logo" />
-                    <h2>boletin virtual</h2>
+                    <h2>BOLETIN VIRTUAL</h2>
                 </a>
                 <ul class="links">
                     <span class="close-btn material-symbols-rounded">close</span>
-                    <li><a href="Instituto.aspx">Instituto</a></li>
-                    <li><a href="#">Contactos</a></li>
+                    <li><a href="https://abc.gob.ar/">PORTAL DEL ABC</a></li>
+                    <li><a href="http://www.instituto46.edu.ar/">INSTITUTO</a></li>
                 </ul>
-                <button type="button" class="login-btn">LOG IN</button>
+                <button type="button" class="login-btn">INICIAR SESION</button>
             </nav>
         </header>
 
         <div class="blur-bg-overlay"></div>
+        <div id="content" class="p-4 p-md-5 pt-5">
+       
+        
+            <h2 class="mb-4">
+            <br> <br><br><br>
+            Ud. a decidido cambiar su rumbo:</h2> <br />
+        <p>
+  A iniciado seguir una carrera,y desde hoy comenzará su trayecto personal y profesional.
+<br />
+        </p>
+        <p>
+            Entrara a la página del instituto para logearse y seguir su carrera on line</p>
+    </div>
+
+
+
 
        <main class="contenido">
 
@@ -53,13 +71,13 @@
                             <div class="input-field">
                                 <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" placeholder="Password"></asp:TextBox>
                             </div>
-                            <asp:Label ID="Label1" runat="server" Text="Label" Visible="false">Contraseña o usuario incorrecto.</asp:Label>
-                            <a href="#" class="forgot-pass-link">Olvidaste tu contraseña?</a>
+                           <!-- <asp:Label ID="Label1" runat="server" Text="Label" Visible="false">Contraseña o usuario incorrecto.</asp:Label>
+                            <a href="#" class="forgot-pass-link">Olvidaste tu contraseña?</a> -->
                             <asp:Button ID="btnLogin" runat="server" Text="Ingresar" CssClass="btn" OnClick="btnLogin_Click" />
                         </asp:Panel>
                     </ContentTemplate>
                 </asp:UpdatePanel>
-                <div class="bottom-link">
+               <!--  <div class="bottom-link">
                     No tienes una cuenta?
                     <a href="#" id="signup-link">Registrarse</a>
                 </div>
@@ -91,11 +109,11 @@
                             <asp:Button ID="btnSignup" runat="server" Text="Sign Up" CssClass="btn" OnClick="btnSignup_Click" />
                         </asp:Panel>
                     </ContentTemplate>
-                </asp:UpdatePanel>
-                <div class="bottom-link">
+                </asp:UpdatePanel> -->
+               <!-- <div class="bottom-link">
                     ya tienes una cuenta?
                     <a href="#" id="login-link">Ingresar</a>
-                </div>
+                </div> --> 
             </div>
         </div>
     </div>
@@ -106,5 +124,11 @@
 </main>
 
     </form>
+     <footer>
+    <br /> <br /> <br /> <br /><br /> <br />
+
+ <p>Práctica_Profesional2025: @Sergio,@Nahuel,@Omar</p>
+</footer> 
+
 </body>
 </html>

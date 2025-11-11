@@ -5,7 +5,7 @@
 
 
     <div class="formbold-main-wrapper">
-        <div class="formbold-form-wrapper">
+        <div class="formbold-form-wrapper-profesorNotas">
             
             
             <div class="formbold-form-title"> 
@@ -16,9 +16,13 @@
         <asp:label  runat="server" for="lastname" class="formbold-form-label">Buscar Materia</asp:label> 
 
 
-        <asp:DropDownList ID="ddlMaterias" runat="server" class="formbold-form-label">
-  
+        <asp:DropDownList ID="ddlMaterias" runat="server" class="formbold-form-label" 
+            >
         </asp:DropDownList>
+
+        <asp:DropDownList ID="ddlAnios" runat="server" AutoPostBack="true" 
+    >
+</asp:DropDownList>
 
     <asp:Button ID="BtnBuscar" runat="server" Text="Button" OnClick="BtnBuscar_Click" />
 
@@ -31,7 +35,9 @@
     OnRowEditing="GridViewBoletin_RowEditing"
     OnRowCancelingEdit="GridViewBoletin_RowCancelingEdit"
     OnRowUpdating="GridViewBoletin_RowUpdating"
-    DataKeyNames="id_alumno">
+    DataKeyNames="id_alumno"
+        CssClass="tabla-materias">
+
 
     <Columns>   
 
@@ -39,32 +45,32 @@
         <asp:BoundField DataField="alumno" HeaderText="Alumno" ReadOnly="True" />
         <asp:BoundField DataField="nombre_materia" HeaderText="Materia" ReadOnly="True" />
 
-        <asp:TemplateField HeaderText="Nota">
-            <ItemTemplate>
-                <%# Eval("nota") %>
-            </ItemTemplate>
-            <EditItemTemplate>
-                <asp:TextBox ID="txtNota" runat="server" Text='<%# Bind("nota") %>' />
-            </EditItemTemplate>
-        </asp:TemplateField>
+       <asp:TemplateField HeaderText="Nota">
+    <ItemTemplate>
+        <asp:Literal ID="litNota" runat="server" Text='<%# FormatearNota(Eval("nota")) %>'></asp:Literal>
+    </ItemTemplate>
+    <EditItemTemplate>
+        <asp:TextBox ID="txtNota" runat="server" Text='<%# Bind("nota") %>' />
+    </EditItemTemplate>
+</asp:TemplateField>
 
-        <asp:TemplateField HeaderText="Nota 2">
-            <ItemTemplate>
-                <%# Eval("nota2") %>
-            </ItemTemplate>
-            <EditItemTemplate>
-                <asp:TextBox ID="txtNota2" runat="server" Text='<%# Bind("nota2") %>' />
-            </EditItemTemplate>
-        </asp:TemplateField>
+<asp:TemplateField HeaderText="Nota 2">
+    <ItemTemplate>
+        <asp:Literal ID="litNota2" runat="server" Text='<%# FormatearNota(Eval("nota2")) %>'></asp:Literal>
+    </ItemTemplate>
+    <EditItemTemplate>
+        <asp:TextBox ID="txtNota2" runat="server" Text='<%# Bind("nota2") %>' />
+    </EditItemTemplate>
+</asp:TemplateField>
 
-        <asp:TemplateField HeaderText="Nota Final">
-            <ItemTemplate>
-                <%# Eval("nota_Final") %>
-            </ItemTemplate>
-            <EditItemTemplate>
-                <asp:TextBox ID="txtNotaFinal" runat="server" Text='<%# Bind("nota_Final") %>' />
-            </EditItemTemplate>
-        </asp:TemplateField>
+<asp:TemplateField HeaderText="Nota Final">
+    <ItemTemplate>
+        <asp:Literal ID="litNotaFinal" runat="server" Text='<%# FormatearNota(Eval("nota_Final")) %>'></asp:Literal>
+    </ItemTemplate>
+    <EditItemTemplate>
+        <asp:TextBox ID="txtNotaFinal" runat="server" Text='<%# Bind("nota_Final") %>' />
+    </EditItemTemplate>
+</asp:TemplateField>
 
         <asp:BoundField DataField="estado" HeaderText="Estado" ReadOnly="True" />
 
@@ -87,51 +93,8 @@
 
  </div>
 
-<!-- <div class="formbold-card">
 
 
-<div class="formbold-input-flex" style="display: flex; gap: 20px;">
-    <div class="formbold-mb-3">
-       <asp:Label ID="lblPrimerNombre" runat="server" CssClass="formbold-form-label" >
-    Primer nombre
-</asp:Label>
-        
-    </div>
-    <div class="formbold-mb-3">
-        <asp:label ID="lblApellido" runat="server" for="lastname" class="formbold-form-label">Apellido</asp:label> 
-    </div>
+
 </div>
-
-
-<div class="formbold-mb-3">
-    <asp:label ID="lblDni" runat="server" for="dni" class="formbold-form-label">DNI</asp:label>
-</div>
-
-<div class="formbold-mb-3">
-    <asp:label ID="lblEmail" runat="server" for="email" class="formbold-form-label">Email</asp:label>
-   
-</div>
-
-<div class="formbold-mb-3">
-    <asp:label ID="lblLegajo" runat="server" for="legajo" class="formbold-form-label">Legajo</asp:label>
-   
-</div>
-
-<div class="formbold-mb-3">
-    <asp:label ID="lblCarrera" runat="server" for="Titulo" class="formbold-form-label">Carrera</asp:label>
-</div>
-
-        
-            
-            <asp:Label ID="Label1" runat="server" EnableViewState="false" />
-        </div>
-
-
-
- <div class="formbold-form-title"> 
-    <p>Mis materias</p>
-</div> -->
-
-
-    </div>
 </asp:Content>

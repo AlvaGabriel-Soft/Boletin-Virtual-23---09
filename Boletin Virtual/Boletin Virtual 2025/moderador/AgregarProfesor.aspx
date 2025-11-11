@@ -26,10 +26,29 @@
                     <label for="firstname" class="formbold-form-label">Primer nombre</label>
                     <asp:TextBox ID="primernombre" runat="server" CssClass="formbold-form-input"></asp:TextBox>
                 </div>
+                <!-- Validador: campo obligatorio -->
+<asp:RequiredFieldValidator ID="rfvPrimerNombre" runat="server" ControlToValidate="primernombre" ErrorMessage="El nombre es obligatorio" ForeColor="Red" Display="Dynamic">
+</asp:RequiredFieldValidator>
+
+<!-- Validador: solo letras -->
+<asp:RegularExpressionValidator ID="revPrimerNombre" runat="server" ControlToValidate="primernombre" ValidationExpression="^[a-zA-ZÁÉÍÓÚáéíóúÑñ\s]+$" ErrorMessage="Solo se permiten letras en el nombre" ForeColor="Red" Display="Dynamic">
+</asp:RegularExpressionValidator>
+
+
+
                 <div >
                     <label for="lastname" class="formbold-form-label">Apellido</label>
                     <asp:TextBox ID="apellido" runat="server" CssClass="formbold-form-input"></asp:TextBox>
                 </div>
+                <!-- Validador: campo obligatorio -->
+<asp:RequiredFieldValidator ID="rfvapellido" runat="server" ControlToValidate="apellido" ErrorMessage="El apellido es obligatorio" ForeColor="Red" Display="Dynamic">
+</asp:RequiredFieldValidator>
+
+<!-- Validador: solo letras -->
+<asp:RegularExpressionValidator ID="revapellido" runat="server" ControlToValidate="apellido" ValidationExpression="^[a-zA-ZÁÉÍÓÚáéíóúÑñ\s]+$" ErrorMessage="Solo se permiten letras en el apellido" ForeColor="Red" Display="Dynamic">
+</asp:RegularExpressionValidator>
+
+
             </div>
 
             <div class="formbold-mb-3">
@@ -37,10 +56,21 @@
                 <asp:TextBox ID="dni" runat="server" CssClass="formbold-form-input"></asp:TextBox>
             </div>
 
+<asp:RegularExpressionValidator ID="rfvDNItext" runat="server" ControlToValidate="dni" ValidationExpression="^\d+$" ErrorMessage="Solo se permiten numeros" ForeColor="Red" Display="Dynamic"></asp:RegularExpressionValidator>
+
+<asp:RegularExpressionValidator ID="revDNItext" runat="server" ControlToValidate="dni" ValidationExpression="^\d+$" ErrorMessage="Solo se permiten numeros en el DNI" ForeColor="Red" Display="Dynamic"></asp:RegularExpressionValidator>
+
+
             <div class="formbold-mb-3">
                 <label for="address2" class="formbold-form-label">Email</label>
                 <asp:TextBox ID="email" runat="server" CssClass="formbold-form-input"></asp:TextBox>
             </div>
+
+
+<asp:RequiredFieldValidator ID="rfvEmailtext" runat="server" ControlToValidate="email" ErrorMessage="El correo electrónico es obligatorio" ForeColor="Red" Display="Dynamic"></asp:RequiredFieldValidator>
+
+<asp:RegularExpressionValidator ID="revEmailtext" runat="server" ControlToValidate="email" ValidationExpression="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" ErrorMessage="Formato de correo no válido" ForeColor="Red" Display="Dynamic"></asp:RegularExpressionValidator>
+
                <div class="formbold-mb-3">
                 <label for="titulo" class="formbold-form-label">titulo</label>
                 <asp:TextBox ID="titulo" runat="server" CssClass="formbold-form-input"></asp:TextBox>
@@ -65,7 +95,7 @@
     Revisar datos
 </button>
             </div>
-            <asp:Label ID="Label1" runat="server" EnableViewState="false" />
+            <asp:Label ID="UsuarioRepetido" runat="server" EnableViewState="false" />
         </div>
 
         <!-- 🔹 POPUP -->

@@ -51,6 +51,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Alumno\Boletin.aspx" />
+    <Content Include="Alumno\Inscripciones.aspx" />
+    <Content Include="Alumno\SimularFecha.aspx" />
     <Content Include="Contenido\MenuModerador\AgregarAlumno\script\AgregarAlumno.js" />
     <Content Include="Contenido\MenuModerador\AgregarAlumno\script\AgregarProfesor.js" />
     <Content Include="moderador\AgregarAlumno.aspx" />
@@ -69,6 +71,8 @@
     <Content Include="Alumno\MisDatosAlumno.aspx" />
     <Content Include="moderador\AgregarProfesor.aspx" />
     <Content Include="moderador\AsignarProfesorMateria.aspx" />
+    <Content Include="moderador\SubirArchivos.aspx" />
+    <Content Include="moderador\WebForm1.aspx" />
     <Content Include="Profesor\Boletin.aspx" />
     <Content Include="Profesor\MisDatos.aspx" />
     <Content Include="Web.config">
@@ -88,6 +92,20 @@
     </Compile>
     <Compile Include="Alumno\Boletin.aspx.designer.cs">
       <DependentUpon>Boletin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Alumno\Inscripciones.aspx.cs">
+      <DependentUpon>Inscripciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Alumno\Inscripciones.aspx.designer.cs">
+      <DependentUpon>Inscripciones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Alumno\SimularFecha.aspx.cs">
+      <DependentUpon>SimularFecha.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Alumno\SimularFecha.aspx.designer.cs">
+      <DependentUpon>SimularFecha.aspx</DependentUpon>
     </Compile>
     <Compile Include="moderador\AgregarAlumno.aspx.cs">
       <DependentUpon>AgregarAlumno.aspx</DependentUpon>
@@ -159,6 +177,20 @@
     <Compile Include="moderador\MenuModerador.Master.designer.cs">
       <DependentUpon>MenuModerador.Master</DependentUpon>
     </Compile>
+    <Compile Include="moderador\SubirArchivos.aspx.cs">
+      <DependentUpon>SubirArchivos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="moderador\SubirArchivos.aspx.designer.cs">
+      <DependentUpon>SubirArchivos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="moderador\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="moderador\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Profesor\Boletin.aspx.cs">
       <DependentUpon>Boletin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -205,7 +237,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>52093</DevelopmentServerPort>
+          <DevelopmentServerPort>54214</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>

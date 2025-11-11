@@ -10,24 +10,33 @@
 namespace Boletin_Virtual_2025.Alumno {
     
     
-    public partial class Boletin {
+    public partial class SimularFecha {
         
         /// <summary>
-        /// Control GridViewMateriasAlumno.
+        /// Control txtFechaSimulada.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridViewMateriasAlumno;
+        protected global::System.Web.UI.WebControls.TextBox txtFechaSimulada;
         
         /// <summary>
-        /// Control lblMensaje.
+        /// Control btnCambiarFecha.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMensaje;
+        protected global::System.Web.UI.WebControls.Button btnCambiarFecha;
+        
+        /// <summary>
+        /// Control lblFechaActual.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblFechaActual;
     }
 }

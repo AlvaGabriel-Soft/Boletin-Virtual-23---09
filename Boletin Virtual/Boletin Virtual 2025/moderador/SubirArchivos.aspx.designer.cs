@@ -7,54 +7,54 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace Boletin_Virtual_2025.Profesor {
+namespace Boletin_Virtual_2025.moderador {
     
     
-    public partial class Boletin {
+    public partial class SubirArchivos {
         
         /// <summary>
-        /// Control ddlMaterias.
+        /// Control fuCsv.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlMaterias;
+        protected global::System.Web.UI.WebControls.FileUpload fuCsv;
         
         /// <summary>
-        /// Control ddlAnios.
+        /// Control btnPreview.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlAnios;
+        protected global::System.Web.UI.WebControls.Button btnPreview;
         
         /// <summary>
-        /// Control BtnBuscar.
+        /// Control btnUpload.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnBuscar;
+        protected global::System.Web.UI.WebControls.Button btnUpload;
         
         /// <summary>
-        /// Control lblMensaje.
+        /// Control lblMsg.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMensaje;
+        protected global::System.Web.UI.WebControls.Label lblMsg;
         
         /// <summary>
-        /// Control GridViewBoletin.
+        /// Control gvPreview.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridViewBoletin;
+        protected global::System.Web.UI.WebControls.GridView gvPreview;
     }
 }

@@ -45,10 +45,17 @@ namespace Boletin_Virtual_2025
         }
 
         protected void btnRegister_Click(object sender, EventArgs e)
+        
+        
+        {
+    if (Page.IsValid) // <-- importante: verifica que todos los validadores pasaron
+        
+        
         {
             if (ExiteUsuario(dni.Text))
             {
-                Response.Write("<script>alert('Usuario repetido');</script>");
+                UsuarioRepetido.Text = "No se a guardado: Usuario repetido";
+                UsuarioRepetido.Visible = true;
             }
             else
             {
@@ -136,7 +143,8 @@ WHERE m.id_carrera = @id_carrera
                        //
                         transaction.Commit();
 
-                        Response.Write("<script>alert('Usuario y alumno creados correctamente');</script>");
+                        UsuarioRepetido.Text = "Usuario guardado correctamente";
+                        UsuarioRepetido.Visible = true;
 
                         primernombre.Text = "";
                         apellido.Text = "";
@@ -150,6 +158,7 @@ WHERE m.id_carrera = @id_carrera
                     }
                 }
             }
+        }
         }
 
         public bool ExiteUsuario(string dni)
